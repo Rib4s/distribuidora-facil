@@ -34,9 +34,9 @@ Criar um sistema SaaS para pequenas distribuidoras de bebidas com:
 * [x] Criar ambiente virtual (venv)
 * [x] Ativar ambiente virtual
 * [x] Instalar FastAPI
-* [ ] Instalar SQLAlchemy
-* [ ] Instalar PostgreSQL
-* [ ] Instalar JWT
+* [x] Instalar SQLAlchemy
+* [x] Instalar PostgreSQL
+* [x] Instalar JWT
 * [x] Instalar bibliotecas auxiliares
 * [x] Gerar requirements.txt
 * [x] Criar primeira API
@@ -46,12 +46,12 @@ Criar um sistema SaaS para pequenas distribuidoras de bebidas com:
 
 ## Frontend
 
-* [ ] Instalar Node.js
-* [ ] Criar projeto React com Vite
-* [ ] Instalar Material UI
-* [ ] Instalar Axios
-* [ ] Instalar React Router
-* [ ] Validar execução do frontend
+* [x] Instalar Node.js
+* [x] Criar projeto React com Vite
+* [x] Instalar Material UI
+* [x] Instalar Axios
+* [x] Instalar React Router
+* [x] Validar execução do frontend
 
 ---
 
@@ -78,10 +78,10 @@ Criar um sistema SaaS para pequenas distribuidoras de bebidas com:
 ## Git e GitHub
 
 * [x] Inicializar Git
-* [ ] Criar repositório GitHub
-* [ ] Vincular repositório remoto
-* [ ] Realizar primeiro commit
-* [ ] Realizar primeiro push
+* [x] Criar repositório GitHub
+* [x] Vincular repositório remoto
+* [x] Realizar primeiro commit
+* [x] Realizar primeiro push
 * [x] Validar .gitignore
 
 ---
@@ -90,16 +90,16 @@ Criar um sistema SaaS para pequenas distribuidoras de bebidas com:
 
 * [x] Validar organização backend/frontend/docs
 * [x] Validar README
-* [ ] Validar documentação inicial
+* [x] Validar documentação inicial
 
 ---
 
 ## Meta da Fase
 
-* [ ] Projeto estruturado profissionalmente
-* [ ] Versionamento funcionando
-* [ ] Documentação criada
-* [ ] Repositório online
+* [x] Projeto estruturado profissionalmente
+* [x] Versionamento funcionando
+* [x] Documentação criada
+* [x] Repositório online
 
 ---
 
@@ -107,6 +107,12 @@ Criar um sistema SaaS para pequenas distribuidoras de bebidas com:
 
 ## Banco de Dados
 
+* [x] Configurar conexão PostgreSQL
+* [x] Configurar SQLAlchemy
+* [x] Criar Session Local
+* [x] Criar Base Declarativa
+* [x] Testar conexão com banco
+* [ ] Criar primeira migration
 * [ ] Criar tabela empresas
 * [ ] Criar tabela usuarios
 * [ ] Criar relacionamento empresa → usuarios
