@@ -112,19 +112,33 @@ Criar um sistema SaaS para pequenas distribuidoras de bebidas com:
 * [x] Criar Session Local
 * [x] Criar Base Declarativa
 * [x] Testar conexão com banco
-* [ ] Criar primeira migration
-* [ ] Criar tabela empresas
-* [ ] Criar tabela usuarios
-* [ ] Criar relacionamento empresa → usuarios
+* [x] Criar tabela empresas
+* [x] Criar tabela usuarios
+* [x] Criar relacionamento empresa → usuarios
+* [x] Instalar Alembic
+* [x] Inicializar Alembic
+* [x] Configurar Alembic
+* [x] Criar primeira migration
+* [x] Executar migration
+* [x] Validar tabelas no PostgreSQL
 
 ## Backend
 
-* [ ] Endpoint de cadastro
-* [ ] Endpoint de login
-* [ ] Endpoint /me
-* [ ] Criptografia de senha
-* [ ] Geração de JWT
-* [ ] Middleware de autenticação
+* [x] Criar schemas Pydantic
+* [x] Criar dependência get_db
+* [x] Endpoint de cadastro
+* [x] Criptografia de senha
+* [x] Testar cadastro via Swagger
+* [x] Criar schema de resposta da empresa
+* [x] Criar schema de resposta do usuário
+* [x] Salvar senha criptografada
+* [x] Criar utilitário JWT
+* [x] Gerar Access Token
+* [x] Criar schema Login
+* [x] Criar endpoint /auth/login
+* [x] Validar email e senha
+* [x] Retornar token JWT
+* [x] Testar login via Swagger
 
 ## Frontend
 
@@ -239,7 +253,19 @@ Criar um sistema SaaS para pequenas distribuidoras de bebidas com:
 
 ---
 
-# MARCOS IMPORTANTES
+# MARCOS TÉCNICOS
+
+* [x] Ambiente configurado
+* [x] Projeto versionado no GitHub
+* [x] Banco de dados estruturado
+* [x] Cadastro funcionando
+* [x] Login JWT funcionando
+* [ ] Primeira rota protegida funcionando
+* [ ] Frontend integrado ao backend
+
+---
+
+# MARCOS IMPORTANTES (MVPs)
 
 * [ ] MVP 1 - Login funcionando
 * [ ] MVP 2 - Estoque funcionando
