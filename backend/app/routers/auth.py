@@ -15,10 +15,9 @@ from app.schemas.usuario import (
     UsuarioResponse
 )
 
-from app.schemas.login import (
-    LoginRequest,
-    TokenResponse
-)
+from app.schemas.login import TokenResponse
+
+from fastapi.security import OAuth2PasswordRequestForm
 
 from app.utils.security import (
     hash_password,
@@ -27,6 +26,9 @@ from app.utils.security import (
 )
 
 from sqlalchemy import select
+
+from app.auth.dependencies import get_current_user
+from typing import Annotated
 
 
 router = APIRouter(
@@ -83,12 +85,12 @@ def register_user(
     response_model=TokenResponse
 )
 def login(
-    login_data: LoginRequest,
+    form_data: OAuth2PasswordRequestForm = Depends(),
     db: Session = Depends(get_db)
 ):
     usuario = db.execute(
         select(Usuario).where(
-            Usuario.email == login_data.email
+            Usuario.email == form_data.username
         )
     ).scalar_one_or_none()
 
@@ -99,7 +101,7 @@ def login(
         )
 
     if not verify_password(
-        login_data.senha,
+        form_data.password,
         usuario.senha
     ):
         raise HTTPException(
@@ -117,3 +119,13 @@ def login(
         "access_token": access_token,
         "token_type": "bearer"
     }
+
+
+@router.get(
+    "/me",
+    response_model=UsuarioResponse
+)
+def me(
+    current_user: Usuario = Depends(get_current_user)
+):
+    return current_user

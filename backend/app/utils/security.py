@@ -1,19 +1,14 @@
-from passlib.context import CryptContext
 from datetime import datetime, timedelta
 
-from jose import jwt
+from app.core.config import ACCESS_TOKEN_EXPIRE_MINUTES, ALGORITHM, SECRET_KEY
+from fastapi import HTTPException
+from jose import JWTError, jwt
+from passlib.context import CryptContext
 
 pwd_context = CryptContext(
     schemes=["bcrypt"],
     deprecated="auto"
 )
-
-
-SECRET_KEY = "distribuidora_facil_secret_key"
-
-ALGORITHM = "HS256"
-
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 
 def hash_password(password: str) -> str:
@@ -48,3 +43,28 @@ def create_access_token(data: dict):
     )
 
     return encoded_jwt
+
+
+def verify_token(token: str):
+    try:
+        payload = jwt.decode(
+            token,
+            SECRET_KEY,
+            algorithms=[ALGORITHM]
+        )
+
+        email = payload.get("sub")
+
+        if email is None:
+            raise HTTPException(
+                status_code=401,
+                detail="Token inválido"
+            )
+
+        return email
+
+    except JWTError:
+        raise HTTPException(
+            status_code=401,
+            detail="Token inválido ou expirado"
+        )
