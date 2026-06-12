@@ -139,6 +139,14 @@ Criar um sistema SaaS para pequenas distribuidoras de bebidas com:
 * [x] Validar email e senha
 * [x] Retornar token JWT
 * [x] Testar login via Swagger
+* [x] Buscar usuário autenticado no banco
+* [x] Retornar dados completos do usuário
+* [x] Testar endpoint /auth/me
+* [x] Instalar python-dotenv
+* [x] Criar SECRET_KEY no .env
+* [x] Ler variáveis de ambiente
+* [x] Remover SECRET_KEY hardcoded
+* [x] Testar autenticação usando .env
 
 ## Frontend
 
@@ -260,7 +268,7 @@ Criar um sistema SaaS para pequenas distribuidoras de bebidas com:
 * [x] Banco de dados estruturado
 * [x] Cadastro funcionando
 * [x] Login JWT funcionando
-* [ ] Primeira rota protegida funcionando
+* [x] Primeira rota protegida funcionando
 * [ ] Frontend integrado ao backend
 
 ---
