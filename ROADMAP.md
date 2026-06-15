@@ -147,20 +147,27 @@ Criar um sistema SaaS para pequenas distribuidoras de bebidas com:
 * [x] Ler variáveis de ambiente
 * [x] Remover SECRET_KEY hardcoded
 * [x] Testar autenticação usando .env
+* [x] Configurar CORS para integração React
+* [x] Configurar OAuth2PasswordRequestForm
+* [x] Integrar Swagger Authorize
+* [x] Criar módulo central de configurações (config.py)
 
 ## Frontend
 
-* [ ] Tela Login
+* [x] Tela Login
+* [x] Consumir endpoint /auth/login
 * [ ] Tela Cadastro
-* [ ] Salvar token
-* [ ] Rotas protegidas
-* [ ] Logout
+* [x] Salvar token
+* [x] Criar AuthContext
+* [x] Criar Dashboard inicial
+* [x] Rotas protegidas
+* [x] Logout
 
 ## Meta da Fase
 
-* [ ] Usuário consegue criar conta
-* [ ] Usuário consegue fazer login
-* [ ] Usuário acessa dashboard protegido
+* [x] Usuário consegue criar conta
+* [x] Usuário consegue fazer login
+* [x] Usuário acessa dashboard protegido
 
 ---
 
@@ -169,6 +176,8 @@ Criar um sistema SaaS para pequenas distribuidoras de bebidas com:
 ## Banco
 
 * [ ] Criar tabela produtos
+* [ ] Adicionar empresa_id em produtos
+* [ ] Criar índice por empresa
 * [ ] Criar relacionamento empresa → produtos
 
 ## Backend
@@ -269,13 +278,13 @@ Criar um sistema SaaS para pequenas distribuidoras de bebidas com:
 * [x] Cadastro funcionando
 * [x] Login JWT funcionando
 * [x] Primeira rota protegida funcionando
-* [ ] Frontend integrado ao backend
+* [x] Frontend integrado ao backend
 
 ---
 
 # MARCOS IMPORTANTES (MVPs)
 
-* [ ] MVP 1 - Login funcionando
+* [x] MVP 1 - Login funcionando
 * [ ] MVP 2 - Estoque funcionando
 * [ ] MVP 3 - Vendas funcionando
 * [ ] MVP 4 - Dashboard funcionando
